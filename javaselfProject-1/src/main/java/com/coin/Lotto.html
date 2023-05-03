@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lotto</title>
+</head>
+<body>
+
+	<h1>로또 로또 로또</h1>
+
+	<div id="result">로또 번호 위치</div>
+
+	<input id="num1" type="number" />
+
+	<button id="maker" onclick="Cal">계산하기</button>
+
+	<script>
+function Cal() {
+  const num1 = document.getElementById("num1").value;
+  
+
+  fetch(`/add?num1=${num1}`)
+    .then(response => response.text())
+    .then(result => {
+      console.log(result);
+      const str = document.getElementById("result");
+      str.innerHTML = result;  
+      // 결과 처리 로직
+    })
+    .catch(error => console.error(error));
+}
+</script>
+
+</body>
+</html>
