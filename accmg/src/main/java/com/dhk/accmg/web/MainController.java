@@ -2,6 +2,7 @@ package com.dhk.accmg.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
@@ -42,6 +43,13 @@ public class MainController {
         
         return "main/main";
         
+    }
+    
+    @GetMapping("/chatmain")
+    public String chatroom() {
+        log.info("chatroom()");
+        
+        return "main/chatroom";
     }
     
 }

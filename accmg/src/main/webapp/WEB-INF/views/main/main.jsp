@@ -23,7 +23,7 @@
 				</c:if>
 			</ul>
 		</nav>
-		<div>
+		<div class="col-8">
 			<ul>
 				<c:url var="subjectCreate" value="/main/sbinsert">
 					<c:param name="userid" value="${ user.id }" />
@@ -32,6 +32,8 @@
 				<li>수입/지출 내역 등록</li>
 				<li>수입/지출 내역보고서 </li>
 				<li>수입/지출 리스트</li>
+				<c:url var="chatroom" value="/main/chatmain" />
+				<li><a href="${ chatroom }">채팅방 입장</a></li>
 			</ul>
 		</div>
 		
